@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}Контакти{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <h1 class="text-center mb-4">Контакти</h1>
+  <div class="row justify-content-center">
+    <!-- Контакт 1 -->
+    <div class="col-md-4 text-center mb-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Олександр Коваленко</h5>
+          <p class="card-text">Телефон: +380 99 123 45 67</p>
+          <p class="card-text">Email: alex.kovalenko@example.com</p>
+        </div>
+      </div>
+    </div>
+    <!-- Контакт 2 -->
+    <div class="col-md-4 text-center mb-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Марія Іваненко</h5>
+          <p class="card-text">Телефон: +380 67 987 65 43</p>
+          <p class="card-text">Email: maria.ivanenko@example.com</p>
+        </div>
+      </div>
+    </div>
+    <!-- Контакт 3 -->
+    <div class="col-md-4 text-center mb-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Ігор Петренко</h5>
+          <p class="card-text">Телефон: +380 50 555 44 33</p>
+          <p class="card-text">Email: igor.petrenko@example.com</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center mt-4">
+    <a href="/" class="btn btn-primary">На головну</a>
+  </div>
+</div>
+{% endblock %}
