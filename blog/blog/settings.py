@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'posts'
 ]
 
 MIDDLEWARE = [
@@ -82,6 +83,18 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'baza_wroterace',
+#         'USER': 'baza_wroterace', 
+#         'PASSWORD': '83cf2f3ac05916e8e9d24f2c71b6fc2cd837c76e',
+#         'HOST': '7l2w2.h.filess.io',
+#         'PORT': '3305', 
+#         'OPCIONS':{'sql_mode':'traditional'},
+#     }
+# }
 
 
 # Password validation

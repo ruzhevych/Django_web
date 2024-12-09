@@ -1,9 +1,9 @@
 # python_web
 
 ```
-py --version
-py -m venv .venv
-.venv\Scripts\activate.bat
+python3 --version
+python3 -m venv .venv
+source .venv/bin/activate
 deactivate
 ```
 
@@ -15,10 +15,10 @@ vscode-icons
 ```
 
 ```
-.venv\Scripts\activate.bat
-py -m pip install Django
-py -m pip install -U pip
-py
+source .venv/bin/activate
+python3 -m pip install Django
+python3 -m pip install -U pip
+python3
 >>>import django
 >>>print(django.get_version())
 >>>quit()
@@ -27,10 +27,17 @@ py
 ```
 django-admin startproject blog
 cd blog
-py manage.py runserver 9178
+python3 manage.py runserver 9178
 
 -------App and Templates--------
 .venv\Scripts\activate.bat
 cd myblog
-
+python manage.py migrate
+python manage.py createsuperuser
 ```
+```
+pip install mysqlclient
+pip install mariadb
+python manage.py makemigrations
+```
+new_secure_password
