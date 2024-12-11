@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'posts',
-    'users'
+    'users',
+    'widget_tweaks'
 ]
 
 MIDDLEWARE = [
@@ -97,6 +98,17 @@ DATABASES = {
 #     }
 # }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'krot_spiritfeed',
+#         'USER': 'krot_spiritfeed', 
+#         'PASSWORD': '1a80737eaebe7e9ae559261d5e35706aaf42fcb3',
+#         'HOST': 'eiepq.h.filess.io',
+#         'PORT': '3305', 
+#         'OPCIONS':{'sql_mode':'traditional'}
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
