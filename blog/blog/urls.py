@@ -24,4 +24,5 @@ urlpatterns = [
     path('contacts/', views.contactpage),
     # path('news/', views.newspage),
     path('news/', include("posts.urls")),
+    path('users/', include("users.urls")),
 ]

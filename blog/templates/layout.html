@@ -7,40 +7,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}My Project{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% comment %} <link rel="stylesheet" href="{% static 'css/style.css' %}"> {% endcomment %}
 </head>
 <body>
-    <!-- Головне меню -->
     <header data-bs-theme="dark">
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-          <div class="container">
-            <a class="navbar-brand" href="/" aria-label="На головну">Головна</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-              <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="/news">Новини</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/contacts">Контакти</a>
-                </li>
-              </ul>
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="/register">Реєстрація</a>
-                </li>
-              </ul>
+            <div class="container">
+                <a class="navbar-brand" href="/" aria-label="На головну">Головна</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/news">Новини</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contacts">Контакти</a>
+                        </li>
+                    </ul>
+
+                    <form class="d-flex me-3" role="search">
+                        <input class="form-control me-2 bg-dark text-light border-light" type="search" placeholder="Пошук" aria-label="Пошук">
+                        <button class="btn btn-outline-light" type="submit">Пошук</button>
+                    </form>
+
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="userMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Профіль
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="userMenu">
+                                <li><a class="dropdown-item" href="/users/login">Увійти</a></li>
+                                <li><a class="dropdown-item" href="/users/register">Реєстрація</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="/users/profile">Мій профіль</a></li>
+                                <li><a class="dropdown-item" href="/admin">Admin</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
-          </div>
         </nav>
     </header>
 
-    
-
     <!-- Основний контент -->
-    <div class="container mt-4">
+    <div class="container mt-5 pt-4">
         {% block content %}
         {% endblock %}
     </div>

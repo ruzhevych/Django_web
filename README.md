@@ -36,7 +36,7 @@ python manage.py migrate
 python manage.py createsuperuser
 ```
 ```
-pip install mysqlclient
+python3 -m pip install mysqlclient
 pip install mariadb
 python manage.py makemigrations
 ```
