@@ -8,6 +8,7 @@ class Post(models.Model):
     slug = models.SlugField()         
     created_at = models.DateTimeField(auto_now_add=True) 
     author = models.ForeignKey(User, on_delete=models.CASCADE, default=None)
+    image = models.ImageField(upload_to='post_images/', blank=True, null=True)
 
     def __str__(self):
         return self.title
